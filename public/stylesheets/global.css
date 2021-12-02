@@ -1,0 +1,12 @@
+/*
+  cor de background: #131215
+  cor de font: #fff
+  cor dos demais componentes: #6655BC
+*/
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #131215;
+  color: #fff;
+}
