@@ -7,6 +7,7 @@ var { renderizaListaAgendamento, renderizaCadastroAgendamento, getAllAgendamento
 router.get('/', renderizaListaAgendamento);
 
 router.get('/cadastro', renderizaCadastroAgendamento);
+
 router.get('/list', getAllAgendamentos);
 
 module.exports = router;
