@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    font-size: xxx-large;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+body {
+    padding: 0;    
+}
+
+
+/* header */
+@media screen{
+
+    header img{
+        height: 70px;
+        width: 70px;
+    }
+
+    header{
+        
+        display: flex;
+        height: 15vh;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid white;
+    }
+    
+    .logo{
+        display: flex;
+        flex-direction: column;
+        height: 15vh;
+        width: 200px;
+        overflow: hidden;
+        font-weight: bold;
+        font-size:x-large;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .login{
+        display: flex;
+        position: absolute;
+        right: 50px;
+    }
+
+    button{
+        height: 50px;
+        width: 200px;
+        font-size: xx-large;
+    }
+
+}
+
+/* intro */
+@media screen {
+    #intro {
+        margin-top: 2vh;
+        display: flex;
+        height: 35vh;
+        justify-content: space-evenly;
+    }
+    
+    #intro img{
+        height: 100%;
+        width: auto;
+    }
+    
+    #intro-text{
+        height: 100%;
+        width: 50%;
+    }
+    
+    #intro-text p{
+        text-align: center;
+    }
+}
+
+/* plans */
+@media screen {
+    #plans{
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: column;
+        height: 35vh;
+        align-items: center;
+        gap: 1vh;
+    }
+    
+    #plans-display{
+        display: flex;
+        height: 30vh;
+        width: 100%;
+        gap: 100px;
+        justify-content: center;
+    }
+    
+    .sqr-display{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 200px;
+        align-items: center;
+        gap: 20px;
+        background: linear-gradient(205deg, rgba(102,85,188,1) 0%, rgba(145,0,125,0) 65%);
+        font-size: x-large;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .plan-pic{
+        margin-top: 1vh;
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+    }
+
+}
+
+/* comments */
+@media screen {
+    
+    #comments{
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        align-items: center;
+        gap: 2vh;
+    }
+    
+    #comments-display{
+        display: flex;
+        height: 100%;
+        gap: 100px;
+        text-align: center;
+    }
+    
+    .sqr-display-cm{
+        height: 100%;
+        width: 200px;
+    }
+    
+    .pic{
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+        object-fit: scale-down;
+    }
+
+}
