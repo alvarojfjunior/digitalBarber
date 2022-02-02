@@ -1,3 +1,5 @@
+const Agendamento = require("../models/Agendamento")
+
 function renderizaListaAgendamento(req, res, next) {
     res.render('listagemAgendamento')
 }
@@ -6,17 +8,10 @@ function renderizaCadastroAgendamento(req, res, next) {
     res.render('formularioAgendamento')
 }
 
-function getAllAgendamentos(req, res, next) {
-    const agendamentos = [
-        {
-            id: 1,
-            nome: 'Luiz'
-        },
-        {
-            id: 2,
-            nome: 'Guilherme'
-        },
-    ]
+async function getAllAgendamentos(req, res, next) {
+    
+    const agendamentos = await Agendamento.findAll()
+
     res.send(agendamentos)
 }
 

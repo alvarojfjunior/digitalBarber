@@ -1,0 +1,39 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/alvaro/.nvm/versions/io.js/v3.3.1/bin/iojs',
+1 verbose cli   '/home/alvaro/.nvm/versions/io.js/v3.3.1/bin/npm',
+1 verbose cli   'start' ]
+2 info using npm@2.14.3
+3 info using node@v3.3.1
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart digitalbarber@0.0.0
+6 info start digitalbarber@0.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info digitalbarber@0.0.0 Failed to exec start script
+9 verbose stack Error: digitalbarber@0.0.0 start: `node ./bin/www`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (/home/alvaro/.nvm/versions/io.js/v3.3.1/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+9 verbose stack     at emitTwo (events.js:87:13)
+9 verbose stack     at EventEmitter.emit (events.js:172:7)
+9 verbose stack     at ChildProcess.<anonymous> (/home/alvaro/.nvm/versions/io.js/v3.3.1/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+9 verbose stack     at emitTwo (events.js:87:13)
+9 verbose stack     at ChildProcess.emit (events.js:172:7)
+9 verbose stack     at maybeClose (internal/child_process.js:764:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+10 verbose pkgid digitalbarber@0.0.0
+11 verbose cwd /home/alvaro/Documentos/dh/digitalBarber
+12 error Linux 5.4.0-91-generic
+13 error argv "/home/alvaro/.nvm/versions/io.js/v3.3.1/bin/iojs" "/home/alvaro/.nvm/versions/io.js/v3.3.1/bin/npm" "start"
+14 error node v3.3.1
+15 error npm  v2.14.3
+16 error code ELIFECYCLE
+17 error digitalbarber@0.0.0 start: `node ./bin/www`
+17 error Exit status 1
+18 error Failed at the digitalbarber@0.0.0 start script 'node ./bin/www'.
+18 error This is most likely a problem with the digitalbarber package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     node ./bin/www
+18 error You can get their info via:
+18 error     npm owner ls digitalbarber
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]
