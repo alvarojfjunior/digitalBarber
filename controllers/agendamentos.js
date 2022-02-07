@@ -12,7 +12,7 @@ async function getAllAgendamentos(req, res, next) {
     
     const agendamentos = await Agendamento.findAll()
 
-    res.send(agendamentos)
+    res.json(agendamentos)
 }
 
 module.exports = {
