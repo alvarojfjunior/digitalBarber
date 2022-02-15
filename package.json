@@ -8,6 +8,19 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    
+    "database:create": "npx sequelize-cli db:create",
+    
+    "migrate:all": "npx sequelize-cli db:migrate",
+    "migrate:undo:all": "npx sequelize-cli db:migrate:undo:all",
+    "seed:all": "npx sequelize-cli db:seed:all",
+    "seed:undo:all": "npx sequelize-cli db:seed:undo:all",
+    
+    "migrate" : "npx sequelize-cli db:migrate --to 02-cria-agendamentos.js",
+    "migrate:undo" : "npx sequelize-cli db:migrate:undo:all --to 02-cria-agendamentos.js",
+    "seed": "npx sequelize-cli db:seed --seed 01-cria-primeiro-usuario.js",
+    "seed:undo": "npx sequelize-cli db:seed:undo --seed 01-cria-primeiro-usuario.js",
+
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
@@ -17,6 +30,7 @@
     "sequelize": "^6.15.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
   }
 }

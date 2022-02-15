@@ -1,0 +1,14 @@
+{
+  "development": {
+    "username": "root",
+    "database": "digital_barber",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "database": "digital_barber",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
