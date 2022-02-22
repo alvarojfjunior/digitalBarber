@@ -22,7 +22,17 @@ const Agendamento = database.define('agendamentos', {
     horario: {
         type: Sequelize.DATE,
         allowNull: false
-    }
+    }, 
+
+    created_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+    },
+
+    updated_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+    },
 }, 
 {
     timeStamps: false,

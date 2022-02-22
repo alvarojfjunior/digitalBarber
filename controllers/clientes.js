@@ -1,38 +1,63 @@
 const Cliente = require("../models/Cliente")
 
-function renderizaListaCliente(req, res, next) {
-    res.render('listagemCliente')
+//index ou getAll
+async function index(req, res) {
+    try {
+        const listaClientes = await Cliente.findAll();
+        return res.json(listaClientes)
+    } catch (error) {
+        return res.json({ message: error.message })
+    }
 }
 
-function renderizaCadastroCliente(req, res, next) {
-    res.render('formularioCliente')
+async function getOne(req, res) {
+    const id = req.params.id
+    try {
+        const retornoDoCliente = await Cliente.findByPk(id)
+        return res.json(retornoDoCliente)
+    } catch (error) {
+        return res.json({ message: error.message })
+    }
 }
 
-async function controllerTesteSequelize(req, res, next) {
+async function create(req, res) {
+    try {
+        const respostaCreateClientes = await Cliente.create(req.body)
+        return res.json(respostaCreateClientes)
+    } catch (error) {
+        return res.json({ message: error.message })
+    }
 
-    // Método da model para criar um registro
-    // const resultadoDoCreate = await Cliente.create({
-    //     nome: 'Cliente teste',
-    //     email: 'teste@gmail.com',
-    //     telefone: '3833212011'
-    // })
-
-    //Método da model para deletar um ou mais registros
-    const resultadoDoDelete = await Cliente.destroy({
-        where: {
-            nome: 'Cliente teste'
-        }
-    })
-
-
-
-    const listagemDosClientes = await Cliente.findAll()
-
-    res.send(listagemDosClientes)
 }
+
+
+async function update(req, res) {
+    const id = req.params.id
+    try {
+        const restornoDoUpdate = await Cliente.update(req.body,  { where: {id: id} })
+
+        return res.json(restornoDoUpdate)
+    } catch (error) {
+        return res.json({ message: error.message })
+    }
+}
+
+async function destroy(req, res) {
+    const id = req.params.id
+    try {
+        const retornoDoDestroy = await Cliente.destroy({ where: { id: id } })
+        return res.json(retornoDoDestroy)
+    } catch (error) {
+        return res.json({ message: error.message })
+    }
+
+}
+
 
 module.exports = {
-    renderizaListaCliente,
-    renderizaCadastroCliente,
-    controllerTesteSequelize
+    index,
+    create,
+    update,
+    destroy,
+    getOne
 }

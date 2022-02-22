@@ -22,7 +22,7 @@ const Cliente = database.define('clientes', {
     email: {
         type: Sequelize.STRING,
         allowNull: false
-    },
+    }
 
 }, 
 {

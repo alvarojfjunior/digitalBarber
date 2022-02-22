@@ -1,12 +1,18 @@
 var express = require('express');
 var router = express.Router();
 
-var { renderizaListaCliente, renderizaCadastroCliente, controllerTesteSequelize } = require('../controllers/clientes')
+var { index, create, update, destroy, getOne } = require('../controllers/clientes')
 
-router.get('/', renderizaListaCliente);
+//CLIENTES
 
-router.get('/cadastro', renderizaCadastroCliente);
+router.get('/', index)
 
-router.get('/teste-sequelize', controllerTesteSequelize)
+router.get('/:id', getOne)
+
+router.post('/', create)
+
+router.put('/:id', update)
+
+router.delete('/:id', destroy)
 
 module.exports = router;
