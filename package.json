@@ -10,12 +10,13 @@
     "migrate:undo:all": "npx sequelize-cli db:migrate:undo:all",
     "seed:all": "npx sequelize-cli db:seed:all",
     "seed:undo:all": "npx sequelize-cli db:seed:undo:all",
-    "migrate" : "npx sequelize-cli db:migrate --to 02-cria-agendamentos.js",
-    "migrate:undo" : "npx sequelize-cli db:migrate:undo:all --to 02-cria-agendamentos.js",
+    "migrate": "npx sequelize-cli db:migrate --to 02-cria-agendamentos.js",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo:all --to 02-cria-agendamentos.js",
     "seed": "npx sequelize-cli db:seed --seed 01-cria-primeiro-usuario.js",
     "seed:undo": "npx sequelize-cli db:seed:undo --seed 01-cria-primeiro-usuario.js"
   },
   "dependencies": {
+    "axios": "^0.26.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
